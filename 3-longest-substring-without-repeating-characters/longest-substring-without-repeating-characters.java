@@ -13,6 +13,7 @@ class Solution {
        
            if(hm.containsKey(ch)){
              l=Math.max(l,hm.get(ch)+1);
+             
            } 
              hm.put(ch,r);
              
