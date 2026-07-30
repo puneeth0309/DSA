@@ -10,12 +10,14 @@ class Solution {
 
        }
        if(Arrays.equals(st,pt)) ls.add(0);
-       for(int i=p.length();i<s.length();i++){
-         st[s.charAt(i)-'a']++;
-         st[s.charAt(i-p.length())-'a']--;
+       int l=0;
+       for(int r=p.length();r<s.length();r++){
+         st[s.charAt(l)-'a']--;
+         st[s.charAt(r)-'a']++;
           if(Arrays.equals(st,pt)){ 
-            ls.add(i-p.length()+1);
+            ls.add(l+1);
           }
+          l++;
        }
        return ls;
     }
